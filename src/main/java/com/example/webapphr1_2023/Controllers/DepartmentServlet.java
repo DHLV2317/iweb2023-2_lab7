@@ -1,5 +1,9 @@
 package com.example.webapphr1_2023.Controllers;
 
+import com.example.webapphr1_2023.Beans.Department;
+import com.example.webapphr1_2023.Beans.Employee;
+import com.example.webapphr1_2023.Beans.Job;
+import com.example.webapphr1_2023.Beans.Location;
 import com.example.webapphr1_2023.Daos.DepartmentDao;
 import com.example.webapphr1_2023.Daos.EmployeeDao;
 import com.example.webapphr1_2023.Daos.JobDao;
@@ -11,6 +15,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 @WebServlet(name = "DepartmentServlet", urlPatterns = {"/DepartmentServlet"})
 public class DepartmentServlet extends HttpServlet {
@@ -20,6 +25,7 @@ public class DepartmentServlet extends HttpServlet {
         EmployeeDao employeeDao = new EmployeeDao();
         JobDao jobDao = new JobDao();
         DepartmentDao departmentDao = new DepartmentDao();
+        ArrayList<department> list = departmentDao.listar();
         req.setAttribute("departmentList", departmentDao.lista());
         view = req.getRequestDispatcher("department/list.jsp");
         view.forward(req, resp);

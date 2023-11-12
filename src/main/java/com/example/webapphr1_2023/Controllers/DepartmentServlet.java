@@ -1,12 +1,11 @@
 package com.example.webapphr1_2023.Controllers;
 
-import com.example.webapphr1_2023.Beans.Department;
-import com.example.webapphr1_2023.Beans.Employee;
-import com.example.webapphr1_2023.Beans.Job;
-import com.example.webapphr1_2023.Beans.Location;
 import com.example.webapphr1_2023.Daos.DepartmentDao;
 import com.example.webapphr1_2023.Daos.EmployeeDao;
 import com.example.webapphr1_2023.Daos.JobDao;
+import com.example.webapphr1_2023.Beans.Department;
+import com.example.webapphr1_2023.Beans.Employee;
+import com.example.webapphr1_2023.Beans.Job;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -15,7 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import  java.util.ArrayList;
 
 @WebServlet(name = "DepartmentServlet", urlPatterns = {"/DepartmentServlet"})
 public class DepartmentServlet extends HttpServlet {

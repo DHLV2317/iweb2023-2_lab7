@@ -2,7 +2,7 @@ package com.example.webapphr1_2023.Beans;
 
 public class Department {
 
-    private int departmentId;
+    private String departmentId;
     private String departmentName;
     private int managerId;
     private int locationId;
@@ -10,7 +10,7 @@ public class Department {
     /**
      * @return the departmentId
      */
-    public int getDepartmentId() {
+    public String getDepartmentId() {
         return departmentId;
     }
 
@@ -18,7 +18,7 @@ public class Department {
      * @param departmentId the departmentId to set
      */
     public void setDepartmentId(int departmentId) {
-        this.departmentId = departmentId;
+        this.departmentId = String.valueOf(departmentId);
     }
 
     /**
